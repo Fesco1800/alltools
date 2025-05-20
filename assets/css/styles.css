@@ -1,0 +1,469 @@
+body {
+  font-family: "PT Mono", monospace;
+  line-height: 1.6;
+  background: #ffffff;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+.hide {
+  display: none;
+}
+
+.alltool-heading {
+  text-align: center;
+}
+
+.primary-button {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 0.375em;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #363636;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 1rem;
+  height: 2.5em;
+  justify-content: center;
+  line-height: 1.5;
+  padding: calc(0.5em - 1px) 1em;
+  position: relative;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.primary-button:active {
+  border-color: #4a4a4a;
+  outline: 0;
+}
+
+.primary-button:focus {
+  border-color: #485fc7;
+  outline: 0;
+}
+
+.primary-button:hover {
+  border-color: #b5b5b5;
+}
+
+.primary-button:focus:not(:active) {
+  box-shadow: rgba(72, 95, 199, 0.25) 0 0 0 0.125em;
+}
+
+.tool-types-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: sans-serif;
+}
+
+.tool-types-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tool-types-header h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.tool-types-header p {
+  color: #666;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 1rem;
+}
+
+.tool-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.tool-types-card {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.tool-types-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-tool-types img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.tool-types-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: #000;
+}
+
+.tool-types-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ==========================
+   Base Styles for All Cards
+========================== */
+.tool-card {
+  padding: 1.25rem 1.5rem;
+  border-radius: 6px;
+  background: #fff;
+  box-sizing: border-box;
+  user-select: none;
+  transition: box-shadow 0.2s ease;
+  color: #000;
+  border: 1.5px solid #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.tool-card:hover {
+  box-shadow: 0 0 10px #0002;
+}
+
+.tool-card h2 {
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #000;
+}
+
+/* ==========================
+   Unit Converters
+========================== */
+.unit-converters {
+  padding: 1.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: #000;
+}
+
+.unit-converters > .back-button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  background: none;
+  border: 2px solid #000;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.unit-converters > .back-button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.unit-converters > span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  user-select: none;
+  color: #000;
+}
+
+.unit-converters .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.unit-converters .converter-card {
+  border: 1.5px solid #000;
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.unit-converters .converter-card-header {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #000;
+}
+
+.unit-converters .converter-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.unit-converters .converter-form-group label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: block;
+  color: #000;
+}
+
+.unit-converters .converter-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.unit-converters .converter-row input,
+.unit-converters .converter-row select {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #000;
+  border-radius: 6px;
+  background: #fff;
+  width: 100%;
+  color: #000;
+}
+
+.unit-converters .converter-row input:focus,
+.unit-converters .converter-row select:focus {
+  outline: none;
+  border-color: #000;
+  background: #fff;
+}
+
+.unit-converters .converter-card button {
+  background: none;
+  border: 1.5px solid #000;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 0.75rem;
+  margin-bottom: 0.75rem;
+  transition: background 0.2s ease, color 0.2s ease;
+  align-self: flex-start;
+}
+
+.unit-converters .converter-card button:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ==========================
+   Clock and Timers
+========================== */
+.clock-and-timers {
+  padding: 1.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: #000;
+}
+
+.clock-and-timers > .back-button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  background: none;
+  border: 2px solid #000;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.clock-and-timers > .back-button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.clock-and-timers > span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  user-select: none;
+  color: #000;
+}
+
+.clock-and-timers .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.clock-and-timers .tool-card {
+  border: 1.5px solid #000;
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.clock-and-timers .tool-card button {
+  background: none;
+  border: 1.5px solid #000;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0.25rem 0.75rem 0.75rem 0;
+  transition: background 0.2s ease, color 0.2s ease;
+  align-self: flex-start;
+}
+
+.clock-and-timers .tool-card button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.clock-and-timers .time-display {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  font-family: monospace, monospace;
+}
+
+/* ==========================
+   File Format Converters (No change)
+========================== */
+.file-format-converters {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: #000;
+}
+
+.file-format-converters.hide {
+  display: none;
+}
+
+.file-format-converters > .back-button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  background: none;
+  border: 2px solid #000;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.file-format-converters > .back-button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.file-format-converters > span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  user-select: none;
+  color: #000;
+}
+
+.file-format-converters .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.file-format-converters .tool-card {
+  border: 1.5px solid #000;
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.file-format-converters .tool-card:hover {
+  box-shadow: 0 0 10px #0002;
+}
+
+.file-format-converters .tool-card textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 0.5rem;
+  font-family: monospace, monospace;
+  font-size: 0.9rem;
+  border: 1px solid #000;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  color: #000;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.file-format-converters .tool-card input[type="file"] {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.file-format-converters .tool-card button {
+  background: none;
+  border: 1.5px solid #000;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 0.75rem;
+  margin-bottom: 0.75rem;
+  transition: background 0.2s ease, color 0.2s ease;
+  align-self: flex-start;
+}
+
+.file-format-converters .tool-card button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.file-format-converters .tool-card img {
+  max-width: 100%;
+  margin-top: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+.file-format-converters .tool-card a {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  user-select: text;
+}
+
+.file-format-converters .tool-card a:hover {
+  text-decoration: underline;
+}
